@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "metainspector"
+version = "1.0.0"
+description = "Analizador y sanitizador forense de metadatos para Linux"
+requires-python = ">=3.9"
+dependencies = [
+    "pillow",
+    "pypdf",
+    "rich",
+]
+
+[project.scripts]
+metainspector = "metainspector:main"
+
+[tool.setuptools]
+py-modules = ["metainspector"]
